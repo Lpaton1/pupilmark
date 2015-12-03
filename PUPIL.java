@@ -18,4 +18,15 @@ public class PUPIL
         surname = rowItems[1];
         mark = Integer.parseInt(rowItems[2]);
     }
+    
+    public String writeDetails()
+    {
+        String pupilData = "";
+        pupilData = pupilData.concat(firstname);
+        pupilData = pupilData.concat(",");
+        pupilData = pupilData.concat(surname);
+        pupilData = pupilData.concat(",");
+        pupilData = pupilData.concat(Integer.toString(mark));
+        return pupilData;
+    }
 }
