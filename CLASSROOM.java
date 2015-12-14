@@ -41,6 +41,19 @@ public class CLASSROOM
     
     public void countHighmark()
     {
+        int maxPupilMark = 0;
         
+        for (int i=1; i<50; i++)
+        {
+            
+            if(pupilList[i].readCSVtable() > dataList[maxdataPosition].getData())
+            {
+                maxDataPositon = i;
+            }
+        }
+        
+        System.out.print("Position is:" + maxDataPosition + " , value is:");
+        dataList[maxDataPosition].displayData();
+        System.out.println();
     }
 }

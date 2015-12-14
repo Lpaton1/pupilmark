@@ -11,6 +11,8 @@ public class PUPIL
         mark = 0;
     }
     
+    public int ge
+    
     public void readpupildetails(String dataItems)
     {
         String [] rowItems = dataItems.split(",");
