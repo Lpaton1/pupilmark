@@ -11,7 +11,20 @@ public class PUPIL
         mark = 0;
     }
     
-    public int ge
+    public int getMark()
+    {
+        return mark;
+    }
+    
+    public String getFirstname()
+    {
+        return firstname;
+    }
+    
+    public String getSurname()
+    {
+        return surname;
+    }
     
     public void readpupildetails(String dataItems)
     {

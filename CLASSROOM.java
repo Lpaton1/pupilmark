@@ -15,7 +15,7 @@ public class CLASSROOM
     public void processClassroom() throws IOException
     {
         setUpPupilList();
-        countHighmark();
+        
     }
     
     public void setUpPupilList() throws IOException
@@ -39,21 +39,23 @@ public class CLASSROOM
         }
     }
     
-    public void countHighmark()
+    public void highMark()
     {
-        int maxPupilMark = 0;
+        int maxMarkPosition= 0;
         
         for (int i=1; i<50; i++)
         {
             
-            if(pupilList[i].readCSVtable() > dataList[maxdataPosition].getData())
+            if(pupilList[i].getMark() > pupilList[maxMarkPosition].getMark())
             {
-                maxDataPositon = i;
+                maxMarkPosition = i;
             }
         }
         
-        System.out.print("Position is:" + maxDataPosition + " , value is:");
-        dataList[maxDataPosition].displayData();
+        System.out.print("Person with highest mark is: ");
+        System.out.print(pupilList[maxMarkPosition].getFirstname() + " ");
+        System.out.print(pupilList[maxMarkPosition].getSurname() + ", ");
+        System.out.println(pupilList[maxMarkPosition].getMark());
         System.out.println();
     }
 }
